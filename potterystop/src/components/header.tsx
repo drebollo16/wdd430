@@ -1,13 +1,17 @@
-import React  from "react";
+import React from "react";
 
-
-const FooterBar = () => {
+const HeaderBar = () => {
     return (
+        <>
+            <link href="/styles/global.css" rel="stylesheet" />
+            <header className="bg-secondary p-4 flex items-center">
+            <img src="/images/bowl.png" className="h-10" alt="headerimg" />
+            <h1 className="text-accent font-bold mr-4">Pottery Stop</h1>
+ 
+</header>
 
-        <><link href="/styles/global.css" rel="stylesheet"></link><header className="bg-secondary p-4">
-            <h1 className="text-4xl text-accent font-bold">Pottery Stop</h1>
-        </header></>
-
-
+        </>
     );
 };
+
+export default HeaderBar;
