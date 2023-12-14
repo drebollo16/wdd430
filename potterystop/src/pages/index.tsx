@@ -29,7 +29,7 @@ export default function Home() {
 </section>
 
 <section className="mb-8 mx-auto flex justify-center">
-  <img src="/images/pottery_featured.jpg" alt="pottery image" className="w-250 h-90 object-cover mb-4 rounded-md" />
+  <img src="/images/berries.png" alt="pottery image" className="w-220 h-80 object-cover mb-4 rounded-md" />
 </section>
 
  

@@ -1,43 +1,19 @@
-// Frontend code 
-// Filename - App.js
-// Filename - App.js
+import { PrismaClient } from '@prisma/client';
 
-import { useState } from 'react'
-function App() {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const handleOnSubmit = async (e: { preventDefault: () => void; }) => {
-		e.preventDefault();
-		let result = await fetch(
-		'http://localhost:5000/register', {
-			method: "post",
-			body: JSON.stringify({ name, email }),
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-		result = await result.json();
-		console.warn(result);
-		if (result) {
-			alert("Data saved succesfully");
-			setEmail("");
-			setName("");
-		}
-	}
-	return (
-		<>
-			<h1>This is React WebApp </h1>
-			<form action="">
-				<input type="text" placeholder="name"
-				value={name} onChange={(e) => setName(e.target.value)} />
-				<input type="email" placeholder="email"
-				value={email} onChange={(e) => setEmail(e.target.value)} />
-				<button type="submit"
-				onClick={handleOnSubmit}>submit</button>
-			</form>
+let prisma: PrismaClient;
 
-		</>
-	);
+if (process.env.NODE_ENV === 'production') {
+  prisma = new PrismaClient();
+} else {
+  // @ts-ignore
+  if (!global.prisma) {
+    // @ts-ignore
+    global.prisma = new PrismaClient();
+  }
+  // @ts-ignore
+  prisma = global.prisma;
 }
 
-export default App;
+export default prisma;
+
+

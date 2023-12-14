@@ -12,7 +12,7 @@ export default function Home() {
       <HeaderBar/>
       <NavBar />
 
-      <main className="max-w-7xl mx-auto p-6 shadow-md">      
+      <main>      
 
     <h2>About Pottery Stop</h2>
 
@@ -23,7 +23,9 @@ export default function Home() {
     <p>Our commitment to sustainability is reflected in our choice of materials and production methods. We strive to minimize our environmental impact and create pottery that you can feel good about owning.</p>
 
     <p>Explore our online store to discover the perfect pottery piece for your home or find a unique gift for a loved one. Thank you for choosing Pottery Stop, where art and functionality meet.</p>
-
+    <section className="mb-8 mx-auto flex justify-center">
+  <img src="/images/spring.png" alt="pottery image" className="w-220 h-70 object-cover mb-4 rounded-md" />
+</section>
 </main>
 
 <FooterBar/>

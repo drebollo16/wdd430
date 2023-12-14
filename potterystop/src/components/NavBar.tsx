@@ -1,7 +1,8 @@
 const NavBar = () => {
   return (
-    <nav className="bg-primary p-4">
-      <div className="flex md:flex md:flex-grow flex-row justify-end space-x-1">
+ 
+    <nav >
+      <div >
         <a href="/" className="">
           Home
         </a>
@@ -9,13 +10,14 @@ const NavBar = () => {
           login
         </a>
         <a href="/showcase" className=" ">
-          SellProduct
+          Showcase
         </a>
         <a href="/about" className="">
           About Us
         </a>
       </div>
     </nav>
+     
   );
 };
 
